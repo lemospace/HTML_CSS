@@ -32,7 +32,7 @@
   text-align: center;
 }
 
-@media all and (min-width: 400px) {
+@media all and (min-width: 300px) {
   .header {
     flex-basis: 100%;
   }
