@@ -4,12 +4,12 @@
   font-size: 0;
   content: " ";
   clear: both;
+  height: 0;
 }
 
 .wrapper {
   text-align: center;
   overflow: hidden;
-  height: 100vh;
 }
 
 .bl {
@@ -19,36 +19,57 @@
 .header {
   background: blue;
   color: #fff;
-  height: 15%;
 }
 .aside-1 {
   background: orange;
-  height: 100%;
 }
 
 .aside-2 {
   background: purple;
-  height: 100%;
 }
 .footer {
   background: green;
   color: #fff;
-  height: 15%;
 }
 
-.center {
-  height: 70%;
+@media all and (min-width: 500px) {
+  .wrapper {
+    height: 100vh;
+  }
+
+  .header {
+    height: 10%;
+  }
+  .aside-1 {
+    height: 10%;
+  }
+
+  .main {
+    height: 60%;
+  }
+
+  .aside-2 {
+    height: 10%;
+  }
+  .footer {
+    height: 10%;
+  }
 }
 
 @media all and (min-width: 800px) {
+  .wrapper {
+    height: 100vh;
+  }
+
   .header {
     clear: both;
     width: 100%;
+    height: 10%;
   }
   .aside-1 {
     width: 20%;
     float: left;
-    padding-bottom: 400px;
+    height: 100%;
   }
   .main {
     width: 60%;
@@ -57,10 +78,14 @@
   .aside-2 {
     width: 20%;
     float: left;
-    padding-bottom: 400px;
+    height: 100%;
+  }
+  .center {
+    height: 80%;
   }
   .footer {
     clear: both;
     width: 100%;
+    height: 10%;
   }
 }
