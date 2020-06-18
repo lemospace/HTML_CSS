@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .clearfix:after {
   visibility: hidden;
   display: block;
@@ -6,6 +10,8 @@
   clear: both;
   height: 0;
 }
+
+
 
 .wrapper {
   text-align: center;
@@ -27,12 +33,15 @@
 .aside-2 {
   background: purple;
 }
+.center {
+  height: 80%;
+}
 .footer {
   background: green;
   color: #fff;
 }
 
-@media all and (min-width: 500px) {
+@media all and (max-width: 500px) {
   .wrapper {
     height: 100vh;
   }
@@ -40,16 +49,7 @@
   .header {
     height: 10%;
   }
-  .aside-1 {
-    height: 10%;
-  }
 
-  .main {
-    height: 60%;
-  }
-
-  .aside-2 {
-    height: 10%;
   }
   .footer {
     height: 10%;
@@ -80,9 +80,8 @@
     float: left;
     height: 100%;
   }
-  .center {
-    height: 80%;
-  }
+  
+  
   .footer {
     clear: both;
     width: 100%;
