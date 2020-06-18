@@ -1,0 +1,75 @@
+.wrapper {
+  display: grid;
+  grid-template-areas:
+    "a a a a a a a"
+    "b b c c c d d"
+    "b b c c c d d"
+    "b b c c c d d"
+    "b b c c c d d"
+    "b b c c c d d"
+    "e e e e e e e";
+  text-align: center;
+}
+.header {
+  background: blue;
+  color: #fff;
+  padding: 20px;
+  grid-area: a;
+}
+.aside-1 {
+  background: orange;
+  grid-area: b;
+  padding: 10px 50px;
+}
+.main {
+  grid-area: c;
+  padding: 5px 30px;
+}
+
+.aside-2 {
+  background: purple;
+  grid-area: d;
+  padding: 10px 50px;
+}
+.footer {
+  background: green;
+  color: #fff;
+  padding: 20px;
+  grid-area: e;
+}
+
+@media all and (max-width: 800px) {
+  .wrapper {
+    display: grid;
+    grid-template-areas:
+      "a a a a"
+      "b b b b"
+      "c c c c"
+      "c c c c"
+      "c c c c"
+      "d d d d"
+      "e e e e";
+  }
+  .header {
+    background: blue;
+    color: #fff;
+    grid-area: a;
+  }
+  .aside-1 {
+    background: orange;
+    grid-area: b;
+  }
+  .main {
+    grid-area: c;
+  }
+
+  .aside-2 {
+    background: purple;
+    grid-area: d;
+  }
+  .footer {
+    background: green;
+    color: #fff;
+    grid-area: e;
+  }
+}

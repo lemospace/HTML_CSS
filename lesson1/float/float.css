@@ -1,0 +1,63 @@
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.wrapper {
+  text-align: center;
+  margin: 50px;
+  max-width: 1200px;
+  overflow: hidden;
+}
+
+.bl {
+  padding: 10px 0;
+}
+
+.header {
+  background: blue;
+  color: #fff;
+}
+.aside-1 {
+  background: orange;
+}
+
+.aside-2 {
+  background: purple;
+}
+.footer {
+  background: green;
+  color: #fff;
+}
+
+.aside {
+}
+
+@media all and (min-width: 800px) {
+  .header {
+    clear: both;
+    width: 100%;
+  }
+  .aside-1 {
+    width: 20%;
+    float: left;
+    padding-bottom: 400px;
+  }
+  .main {
+    width: 60%;
+    float: left;
+  }
+  .aside-2 {
+    width: 20%;
+    float: left;
+    padding-bottom: 400px;
+  }
+  .footer {
+    clear: both;
+    width: 100%;
+  }
+}
