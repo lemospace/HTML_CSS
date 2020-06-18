@@ -4,14 +4,12 @@
   font-size: 0;
   content: " ";
   clear: both;
-  height: 0;
 }
 
 .wrapper {
   text-align: center;
-  margin: 50px;
-  max-width: 1200px;
   overflow: hidden;
+  height: 100vh;
 }
 
 .bl {
@@ -21,20 +19,25 @@
 .header {
   background: blue;
   color: #fff;
+  height: 15%;
 }
 .aside-1 {
   background: orange;
+  height: 100%;
 }
 
 .aside-2 {
   background: purple;
+  height: 100%;
 }
 .footer {
   background: green;
   color: #fff;
+  height: 15%;
 }
 
-.aside {
+.center {
+  height: 70%;
 }
 
 @media all and (min-width: 800px) {
