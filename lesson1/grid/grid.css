@@ -10,6 +10,7 @@
     "b c d"
     "e e e";
   text-align: center;
+  grid-template-rows: 10% 80% 10%;
 }
 .header {
   background: blue;
@@ -49,6 +50,7 @@
       "c"
       "d"
       "e";
+    grid-template-rows: 10% 10% 60% 10% 10%;
   }
   .header {
     background: blue;
