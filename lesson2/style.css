@@ -1,26 +1,173 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .page-wrap {
-    width: 800px;
-    margin: 20px auto;
+  width: 900px;
+  margin: 20px auto;
 }
 
 .main-story {
-    position: relative;
-    margin: 0 0 25px 0;
+  position: relative;
+  margin: 0 0 25px 0;
+}
+.header {
+  text-align: center;
 }
 
 img {
-    display: block;
+  display: block;
+}
+.fixed-img {
+  max-width: 100%;
+}
+.my-img {
+  max-width: 250px;
+  height: 350px;
 }
 
 a {
-    color: lightblue;
+  color: lightblue;
+}
+
+h1 {
+  font-size: 4em;
+}
+h1,
+h2 {
+  margin: 0 0 10px 0;
 }
 
 .story-intro {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 10px;
+  color: white;
+}
+
+.story-intro h1 {
+  font-size: 2.5em;
+}
+.story-intro p {
+  margin: 0;
+}
+
+.story2 {
+  overflow: hidden;
+}
+.story3 {
+  overflow: hidden;
+}
+
+.sub-story {
+  float: left;
+
+  position: relative;
+  font-size: 80%;
+}
+
+.last {
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .page-wrap {
+    max-width: 100%;
+    display: grid;
+    grid-template-areas:
+      "a"
+      "b"
+      "c"
+      "d"
+      "e";
+  }
+  h1 {
+    font-size: 3em;
+  }
+  .story-intro h1 {
+    font-size: 1.5em;
+  }
+  .header {
+  }
+  .main-story {
+  }
+  .story2 {
+    justify-self: center;
+  }
+  .story3 {
+    justify-self: center;
+  }
+  .last {
+    justify-self: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page-wrap {
+    max-width: 500px;
+    display: grid;
+    grid-template-areas:
+      "a a a a"
+      "b b c c"
+      "d d e e";
+    grid-template-rows: 100px 350px 350px;
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+  .story-intro h1 {
+    font-size: 2em;
+  }
+  .header h1 {
+    font-size: 3em;
+    text-align: center;
+  }
+  .header {
+    grid-area: a;
+    grid-column: span 4;
+  }
+  .main-story {
+    grid-area: b;
+    grid-column: span 4 / -1;
+  }
+  .fixed-img {
+    object-fit: cover;
+    width: 100%;
+    min-height: 350px;
+  }
+  .story2 {
+    grid-area: c;
+    justify-self: start;
+    grid-column: span -2 / 3;
+  }
+  .kitten {
+    object-fit: cover;
+  }
+  .story3 {
+    grid-area: d;
+    justify-self: center;
+    grid-column: span 2;
+  }
+  .last {
+    grid-area: e;
+    justify-self: start;
+    grid-column: span 2;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .page-wrap {
+    max-width: 100vw;
+    display: grid;
+    grid-template-areas:
+      "a a a"
+      "b b b"
+      "c d e";
+
+    grid-template-rows: 120px auto 350px;
+    grid-template-columns: 300px 300px 300px;
+  }
+  .story-intro {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -28,35 +175,28 @@ a {
     background: rgba(0, 0, 0, 0.75);
     padding: 20px;
     color: white;
+  }
+  .header {
+    grid-area: a;
+  }
+  .main-story {
+    grid-area: b;
+  }
+  .story2 {
+    grid-area: c;
+    justify-self: start;
+  }
+  .story3 {
+    grid-area: d;
+    justify-self: center;
+  }
+  .last {
+    grid-area: e;
+    justify-self: end;
+  }
 }
-
-h1 {
-    font-size: 4em;
-}
-h1, h2 {
-    margin: 0 0 10px 0;
-}
-
-.story-intro h1 {
-    font-size: 2.5em;
-}
-.story-intro p {
-    margin: 0;
-}
-
-.sub-stories {
-    overflow: hidden;
-    margin: 0 0 25px 0;
-}
-
-.sub-story {
-    float: left;
-    width: 250px;
-    margin-right: 25px;
-    position: relative;
-    font-size: 80%;
-}
-
-.last {
-    margin-right: 0;
+@media screen and (min-width: 1200px) {
+  .page-wrap {
+    background: gray;
+  }
 }
