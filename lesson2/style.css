@@ -3,7 +3,7 @@
 }
 
 .page-wrap {
-  width: 900px;
+  max-width: 900px;
   margin: 20px auto;
 }
 
@@ -91,9 +91,10 @@ h2 {
   .story-intro h1 {
     font-size: 1.5em;
   }
-  .header {
-  }
-  .main-story {
+  .fixed-img {
+    object-fit: cover;
+    min-height: 350px;
+    min-width: 100%;
   }
   .story2 {
     justify-self: center;
@@ -107,15 +108,16 @@ h2 {
 }
 @media screen and (min-width: 768px) {
   .page-wrap {
-    max-width: 600px;
+    max-width: 700px;
     display: grid;
     grid-template-areas:
-      "a a a a"
-      "b b c c"
-      "d d e e";
-    grid-template-rows: 100px 350px 350px;
-    grid-template-columns: repeat(4, 25%);
-    grid-gap: 5px;
+      "a a"
+      "b b"
+      "c d"
+      "e e";
+    grid-template-rows: 110px 350px 350px 350px;
+    grid-template-columns: 50% 50%;
+    grid-gap: 10px;
   }
   .story-intro h1 {
     font-size: 2em;
@@ -126,43 +128,30 @@ h2 {
   }
   .header {
     grid-area: a;
-    grid-column: 1 / 5;
   }
   .main-story {
     grid-area: b;
-    justify-self: start;
-    align-self: start;
-    grid-column: 1 / 4;
+    align-self: end;
   }
   .fixed-img {
     object-fit: cover;
-    width: 400px;
-    min-height: 350px;
+    max-height: 350px;
+    width: 100%;
   }
+
   .story2 {
     grid-area: c;
-    justify-self: end;
-    grid-column: 4 / 5;
+    justify-self: center;
   }
-  .kitten {
-    object-fit: cover;
-    width: 200px;
-    min-height: 100%;
-  }
+
   .story3 {
     grid-area: d;
-
     justify-self: center;
-    grid-column: 1 / 3;
-  }
-  .my-img {
-    object-fit: cover;
   }
 
   .last {
     grid-area: e;
     justify-self: center;
-    grid-column: 3 / 5;
   }
 }
 
@@ -175,7 +164,7 @@ h2 {
       "b b b"
       "c d e";
 
-    grid-template-rows: 120px auto 350px;
+    grid-template-rows: 120px 400px 350px;
     grid-template-columns: 300px 300px 300px;
   }
   h1 {
@@ -201,6 +190,7 @@ h2 {
   .fixed-img {
     object-fit: cover;
     min-width: 100%;
+    min-height: 400px;
   }
   .story2 {
     grid-area: c;
@@ -219,7 +209,7 @@ h2 {
   }
 }
 @media screen and (min-width: 1200px) {
-  .page-wrap {
+  body {
     background: gray;
   }
 }
