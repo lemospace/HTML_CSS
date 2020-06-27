@@ -89,8 +89,8 @@ body {
 }
 
 #r1:checked ~ #one,
-#r1:checked ~ #two,
-#r1:checked ~ #three {
+#r2:checked ~ #two,
+#r3:checked ~ #three {
     z-index: 9;
 }
 
