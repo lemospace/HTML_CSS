@@ -98,4 +98,20 @@ body {
 #r2:checked ~ .nav #dot2,
 #r3:checked ~ .nav #dot3 {
     background: #ffffff;
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+
+.next-icon,
+.prev-icon {
+    overflow: hidden;
+    position: absolute;
+    bottom: 50%;
+    padding: 0 10px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.next-icon {
+    right: 0;
 }
