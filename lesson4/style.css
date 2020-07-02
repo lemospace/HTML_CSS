@@ -12,28 +12,16 @@ body {
 }
 
 .deal-container {
-  max-width: 1200px;
-  max-height: 800px;
+  width: 100%;
+  height: 100%;
   margin: 0px auto;
   position: relative;
 }
 
 .container {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin: 0px auto;
 }
 
-/*.deals {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    position: relative;
-}*/
 .top-deal {
   border: 1px solid #ff6666;
   position: relative;
@@ -158,7 +146,6 @@ body {
 }
 
 .dots {
-  max-width: 90%;
   font-size: 20px;
   padding: 0 15px;
   position: relative;
@@ -167,7 +154,7 @@ body {
 .deal1 {
   border: 1px solid #ff931d;
   position: relative;
-  margin: 5px 5px;
+  margin: 0px auto;
 }
 
 .deal1 .deals__sale {
@@ -689,76 +676,111 @@ body {
   text-decoration: underline;
 }
 
+@media screen and (max-width: 768px) {
+  .deal-container {
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+  }
+  .container {
+    max-width: 400px;
+    margin: 0px auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: 30% 14% 14% 14% 14% 14%;
+        grid-template-rows: 30% 14% 14% 14% 14% 14%;
+  }
+  .top-deal .price-row .old-price:before {
+    width: 10%;
+    height: 5.5%;
+  }
+  .deal1 .price-row .old-price:before {
+    width: 10%;
+    height: 5.5%;
+  }
+  .deal2 .price-row .old-price:before {
+    width: 10%;
+    height: 5.5%;
+  }
+  .deal3 .price-row .old-price:before {
+    width: 10%;
+    height: 5.5%;
+  }
+  .deal4 .price-row .old-price:before {
+    width: 10%;
+    height: 5.5%;
+  }
+  .deal5 .price-row .old-price:before {
+    width: 10%;
+    height: 5.5%;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .deal-container {
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+  }
+  .container {
+    max-width: 600px;
+    margin: 0px auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+    -ms-grid-rows: 25% 25% 25% 25%;
+        grid-template-rows: 25% 25% 25% 25%;
+  }
+  .dots {
+    font-size: 14.5px;
+  }
+  .top-deal {
+    grid-row: span 2;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .deal-container {
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0px auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 33% 33% 33%;
+        grid-template-columns: 33% 33% 33%;
+    -ms-grid-rows: 33% 33% 33%;
+        grid-template-rows: 33% 33% 33%;
+  }
+  .top-deal {
+    grid-row: span 2;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .deal-container {
     max-width: 100%;
+    max-height: 100%;
     overflow: hidden;
   }
   .container {
     max-width: 1000px;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 100%;
-            flex: 1 1 100%;
     margin: 0px auto;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 33% 33% 33%;
+        grid-template-columns: 33% 33% 33%;
+    -ms-grid-rows: 33% 33% 33%;
+        grid-template-rows: 33% 33% 33%;
   }
   .top-deal {
-    max-height: 400px;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 30%;
-            flex: 1 1 30%;
-  }
-  /* .deals {
-         display: flex;
-         flex-flow: row wrap;
-         flex: 1 1 60%;
-     } */
-  .deal1 {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 30%;
-            flex: 1 1 30%;
-    -ms-flex-item-align: start;
-        align-self: flex-start;
-  }
-  .deal2 {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 30%;
-            flex: 1 1 30%;
-    -ms-flex-item-align: start;
-        align-self: flex-start;
-  }
-  .deal3 {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 30%;
-            flex: 1 1 30%;
-    -ms-flex-item-align: start;
-        align-self: flex-start;
-  }
-  .deal4 {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 30%;
-            flex: 1 1 30%;
-    -ms-flex-item-align: start;
-        align-self: flex-start;
-  }
-  .deal5 {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 30%;
-            flex: 1 1 30%;
-    -ms-flex-item-align: start;
-        align-self: flex-start;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .deal-container {
-    max-width: none;
+    grid-row: span 2;
   }
 }
 /*# sourceMappingURL=style.css.map */
