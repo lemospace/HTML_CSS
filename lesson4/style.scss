@@ -15,9 +15,6 @@ body {
     height: 100%;
     position: relative;
     display: grid;
-}
-
-.container {
     margin: 0px auto;
 }
 
@@ -28,7 +25,7 @@ body {
     color: #878787;
 
     &:hover {
-        border: 3px solid #ff6666;
+        outline: 3px solid #ff6666;
 
         .text {
             text-decoration: underline;
@@ -315,8 +312,9 @@ body {
 }
 
 .deal1:hover,
-.deal2:hover {
-    border: 3px solid  #ff931d;
+.deal2:hover,
+.deal5:hover {
+    outline: 3px solid  #ff931d;
 
     .text {
         text-decoration: underline;
@@ -562,9 +560,8 @@ body {
 }
 
 .deal3:hover,
-.deal4:hover,
-.deal5:hover {
-    border: 3px solid #ffbe17;
+.deal4:hover {
+    outline: 3px solid #ffbe17;
 
     .text {
         text-decoration: underline;
@@ -902,6 +899,19 @@ body {
     .top-deal {
         grid-row: span 2;
 
+        .top-details {
+            .price-row {
+                .current-price {
+                    .old-price {
+                        &:before {
+                            width: 15%;
+                            height: 1.5%;
+                        }
+                    }
+                }
+            }
+        }
+
         &__container {
             .top-image {
                 margin: 0 20px;
@@ -911,16 +921,67 @@ body {
                 }
             }
         }
+    }
 
+    .deal1 {
         .details {
             .price-row {
                 .current-price {
-                    font-size: 26px;
+                    .old-price:before {
+                        width: 14%;
+                        height: 4%;
+                    }
                 }
+            }
+        }
+    }
 
-                .old-price {
-                    &:before {
-                        width: 15%;
+    .deal2 {
+        .details {
+            .price-row {
+                .current-price {
+                    .old-price:before {
+                        width: 14%;
+                        height: 4%;
+                    }
+                }
+            }
+        }
+    }
+
+    .deal3 {
+        .details {
+            .price-row {
+                .current-price {
+                    .old-price:before {
+                        width: 14%;
+                        height: 4%;
+                    }
+                }
+            }
+        }
+    }
+
+    .deal4 {
+        .details {
+            .price-row {
+                .current-price {
+                    .old-price:before {
+                        width: 14%;
+                        height: 4%;
+                    }
+                }
+            }
+        }
+    }
+
+    .deal5 {
+        .details {
+            .price-row {
+                .current-price {
+                    .old-price:before {
+                        width: 14%;
+                        height: 4%;
                     }
                 }
             }

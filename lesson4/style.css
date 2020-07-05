@@ -17,9 +17,6 @@ body {
   position: relative;
   display: -ms-grid;
   display: grid;
-}
-
-.container {
   margin: 0px auto;
 }
 
@@ -32,7 +29,7 @@ body {
 }
 
 .top-deal:hover {
-  border: 3px solid #ff6666;
+  outline: 3px solid #ff6666;
 }
 
 .top-deal:hover .text {
@@ -402,12 +399,14 @@ body {
 }
 
 .deal1:hover,
-.deal2:hover {
-  border: 3px solid  #ff931d;
+.deal2:hover,
+.deal5:hover {
+  outline: 3px solid  #ff931d;
 }
 
 .deal1:hover .text,
-.deal2:hover .text {
+.deal2:hover .text,
+.deal5:hover .text {
   text-decoration: underline;
 }
 
@@ -722,14 +721,12 @@ body {
 }
 
 .deal3:hover,
-.deal4:hover,
-.deal5:hover {
-  border: 3px solid #ffbe17;
+.deal4:hover {
+  outline: 3px solid #ffbe17;
 }
 
 .deal3:hover .text,
-.deal4:hover .text,
-.deal5:hover .text {
+.deal4:hover .text {
   text-decoration: underline;
 }
 
@@ -908,17 +905,35 @@ body {
   .top-deal {
     grid-row: span 2;
   }
+  .top-deal .top-details .price-row .current-price .old-price:before {
+    width: 15%;
+    height: 1.5%;
+  }
   .top-deal__container .top-image {
     margin: 0 20px;
   }
   .top-deal__container .top-image img {
     width: 90%;
   }
-  .top-deal .details .price-row .current-price {
-    font-size: 26px;
+  .deal1 .details .price-row .current-price .old-price:before {
+    width: 14%;
+    height: 4%;
   }
-  .top-deal .details .price-row .old-price:before {
-    width: 15%;
+  .deal2 .details .price-row .current-price .old-price:before {
+    width: 14%;
+    height: 4%;
+  }
+  .deal3 .details .price-row .current-price .old-price:before {
+    width: 14%;
+    height: 4%;
+  }
+  .deal4 .details .price-row .current-price .old-price:before {
+    width: 14%;
+    height: 4%;
+  }
+  .deal5 .details .price-row .current-price .old-price:before {
+    width: 14%;
+    height: 4%;
   }
 }
 /*# sourceMappingURL=style.css.map */
