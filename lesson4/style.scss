@@ -35,9 +35,13 @@ body {
 
     &__container {
         display: grid;
-        grid-template-columns: 20% 80%;
+        grid-template-columns: 10% 90%;
+        grid-template-rows: 50% 50%;
 
         .sale {
+            display: grid;
+            align-items: center;
+            align-self: center;
             background: #ff6666;
             font-size: 18px;
             color: #ffffff;
@@ -47,8 +51,6 @@ body {
             border-radius: 50%;
             width: 60px;
             height: 60px;
-            padding-top: 10px;
-            margin-top: 5px;
             justify-self: center;
         }
 
@@ -59,6 +61,7 @@ body {
 
         .top-image {
             align-self: end;
+            grid-area: span 2;
         }
     }
 
@@ -126,6 +129,8 @@ body {
 }
 
 .deals__sale {
+    display: grid;
+    align-items: center;
     font-size: 15px;
     color: #ffffff;
     line-height: 1.2;
@@ -134,7 +139,6 @@ body {
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    padding-top: 7px;
 }
 
 .deals-container {
@@ -602,58 +606,10 @@ body {
         }
     }
 
-    .deal1 {
-        .details {
-            .price-row {
-                .current-price {
-                    .old-price:before {
-                        width: 12%;
-                        height: 4%;
-                    }
-                }
-            }
-        }
-    }
-
-    .deal2 {
-        .details {
-            .price-row {
-                .current-price {
-                    .old-price:before {
-                        width: 12%;
-                        height: 4%;
-                    }
-                }
-            }
-        }
-    }
-
-    .deal3 {
-        .details {
-            .price-row {
-                .current-price {
-                    .old-price:before {
-                        width: 12%;
-                        height: 4%;
-                    }
-                }
-            }
-        }
-    }
-
-    .deal4 {
-        .details {
-            .price-row {
-                .current-price {
-                    .old-price:before {
-                        width: 12%;
-                        height: 4%;
-                    }
-                }
-            }
-        }
-    }
-
+    .deal1,
+    .deal2,
+    .deal3,
+    .deal4,
     .deal5 {
         .details {
             .price-row {
@@ -713,58 +669,10 @@ body {
         }
     }
 
-    .deal1 {
-        .details {
-            .price-row {
-                .current-price {
-                    .old-price:before {
-                        width: 15%;
-                        height: 3%;
-                    }
-                }
-            }
-        }
-    }
-
-    .deal2 {
-        .details {
-            .price-row {
-                .current-price {
-                    .old-price:before {
-                        width: 15%;
-                        height: 3%;
-                    }
-                }
-            }
-        }
-    }
-
-    .deal3 {
-        .details {
-            .price-row {
-                .current-price {
-                    .old-price:before {
-                        width: 15%;
-                        height: 3%;
-                    }
-                }
-            }
-        }
-    }
-
-    .deal4 {
-        .details {
-            .price-row {
-                .current-price {
-                    .old-price:before {
-                        width: 15%;
-                        height: 3%;
-                    }
-                }
-            }
-        }
-    }
-
+    .deal1,
+    .deal2,
+    .deal3,
+    .deal4,
     .deal5 {
         .details {
             .price-row {
@@ -816,58 +724,10 @@ body {
         }
     }
 
-    .deal1 {
-        .details {
-            .price-row {
-                .current-price {
-                    .old-price:before {
-                        width: 17.5%;
-                        height: 3%;
-                    }
-                }
-            }
-        }
-    }
-
-    .deal2 {
-        .details {
-            .price-row {
-                .current-price {
-                    .old-price:before {
-                        width: 17.5%;
-                        height: 3%;
-                    }
-                }
-            }
-        }
-    }
-
-    .deal3 {
-        .details {
-            .price-row {
-                .current-price {
-                    .old-price:before {
-                        width: 17.5%;
-                        height: 3%;
-                    }
-                }
-            }
-        }
-    }
-
-    .deal4 {
-        .details {
-            .price-row {
-                .current-price {
-                    .old-price:before {
-                        width: 17.5%;
-                        height: 3%;
-                    }
-                }
-            }
-        }
-    }
-
+    .deal1,
+    .deal2,
+    .deal3,
+    .deal4,
     .deal5 {
         .details {
             .price-row {
@@ -918,64 +778,16 @@ body {
                 margin: 0 20px;
 
                 img {
-                    width: 90%;
+                    width: 94%;
                 }
             }
         }
     }
 
-    .deal1 {
-        .details {
-            .price-row {
-                .current-price {
-                    .old-price:before {
-                        width: 14%;
-                        height: 4%;
-                    }
-                }
-            }
-        }
-    }
-
-    .deal2 {
-        .details {
-            .price-row {
-                .current-price {
-                    .old-price:before {
-                        width: 14%;
-                        height: 4%;
-                    }
-                }
-            }
-        }
-    }
-
-    .deal3 {
-        .details {
-            .price-row {
-                .current-price {
-                    .old-price:before {
-                        width: 14%;
-                        height: 4%;
-                    }
-                }
-            }
-        }
-    }
-
-    .deal4 {
-        .details {
-            .price-row {
-                .current-price {
-                    .old-price:before {
-                        width: 14%;
-                        height: 4%;
-                    }
-                }
-            }
-        }
-    }
-
+    .deal1,
+    .deal2,
+    .deal3,
+    .deal4,
     .deal5 {
         .details {
             .price-row {
