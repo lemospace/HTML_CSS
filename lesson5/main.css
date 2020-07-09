@@ -193,41 +193,37 @@
   display: grid;
 }
 
-.main .deal1 {
-  border: 1px solid #ff931d;
+.main .deals {
   position: relative;
 }
 
-.main .deal1 .deals-container {
+.main .deals .deals-container {
   position: relative;
 }
 
-.main .deal1 .deals-container .left-container {
+.main .deals .deals-container .left-container {
   padding: 10px 20px;
 }
 
-.main .deal1 .deals-container .left-container .deals__sale {
-  background-color: #ff931d;
-}
-
-.main .deal1 .deals-container .left-container .text {
+.main .deals .deals-container .left-container .text {
   padding-top: 10px;
 }
 
-.main .deal1 .deals-container .image {
+.main .deals .deals-container .image {
   padding-top: 10px;
-}
-
-.main .deal1 .deals-container .image img {
-  max-width: 70%;
-}
-
-.main .deal1 .details {
   display: -ms-grid;
   display: grid;
 }
 
-.main .deal1 .details .price-row {
+.main .deals .deals-container .image img {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.main .deal1 .details .price-row,
+.main .deal2 .details .price-row,
+.main .deal3 .details .price-row,
+.main .deal4 .details .price-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -242,8 +238,10 @@
   width: 100%;
 }
 
-.main .deal1 .details .price-row .current-price {
-  color: #ff931d;
+.main .deal1 .details .price-row .current-price,
+.main .deal2 .details .price-row .current-price,
+.main .deal3 .details .price-row .current-price,
+.main .deal4 .details .price-row .current-price {
   font-size: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -253,7 +251,10 @@
           align-items: flex-end;
 }
 
-.main .deal1 .details .price-row .current-price .old-price {
+.main .deal1 .details .price-row .current-price .old-price,
+.main .deal2 .details .price-row .current-price .old-price,
+.main .deal3 .details .price-row .current-price .old-price,
+.main .deal4 .details .price-row .current-price .old-price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -261,7 +262,10 @@
   color: #878787;
 }
 
-.main .deal1 .details .price-row .current-price .old-price:before {
+.main .deal1 .details .price-row .current-price .old-price:before,
+.main .deal2 .details .price-row .current-price .old-price:before,
+.main .deal3 .details .price-row .current-price .old-price:before,
+.main .deal4 .details .price-row .current-price .old-price:before {
   border-bottom: 2px solid #878787;
   position: absolute;
   content: "";
@@ -271,7 +275,10 @@
           transform: rotate(-7deg);
 }
 
-.main .deal1 .details .price-row .amazon {
+.main .deal1 .details .price-row .amazon,
+.main .deal2 .details .price-row .amazon,
+.main .deal3 .details .price-row .amazon,
+.main .deal4 .details .price-row .amazon {
   display: -ms-grid;
   display: grid;
   -webkit-box-align: end;
@@ -281,6 +288,27 @@
       -ms-flex-pack: end;
           justify-content: end;
   width: 37%;
+}
+
+.main .deal1 {
+  border: 1px solid #ff931d;
+}
+
+.main .deal1 .deals-container .left-container .deals__sale {
+  background-color: #ff931d;
+}
+
+.main .deal1 .deals-container .image img {
+  max-width: 70%;
+}
+
+.main .deal1 .details {
+  display: -ms-grid;
+  display: grid;
+}
+
+.main .deal1 .details .price-row .current-price {
+  color: #ff931d;
 }
 
 .main .deal1 .details .new {
@@ -294,96 +322,18 @@
 
 .main .deal2 {
   border: 1px solid #ff931d;
-  position: relative;
-}
-
-.main .deal2 .deals-container {
-  position: relative;
-}
-
-.main .deal2 .deals-container .left-container {
-  padding: 10px 20px;
 }
 
 .main .deal2 .deals-container .left-container .deals__sale {
   background-color: #ff931d;
 }
 
-.main .deal2 .deals-container .left-container .text {
-  padding-top: 10px;
-}
-
-.main .deal2 .deals-container .image {
-  padding-top: 10px;
-  display: -ms-grid;
-  display: grid;
-}
-
 .main .deal2 .deals-container .image img {
   max-width: 65%;
-  -ms-grid-column-align: center;
-      justify-self: center;
-}
-
-.main .deal2 .details {
-  display: -ms-grid;
-  display: grid;
-}
-
-.main .deal2 .details .price-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  padding: 0 20px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
 }
 
 .main .deal2 .details .price-row .current-price {
   color: #ff931d;
-  font-size: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-.main .deal2 .details .price-row .current-price .old-price {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 15px;
-  color: #878787;
-}
-
-.main .deal2 .details .price-row .current-price .old-price:before {
-  border-bottom: 2px solid #878787;
-  position: absolute;
-  content: "";
-  width: 14%;
-  height: 3%;
-  -webkit-transform: rotate(-7deg);
-          transform: rotate(-7deg);
-}
-
-.main .deal2 .details .price-row .amazon {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  width: 37%;
 }
 
 .main .deal2 .details .info {
@@ -416,35 +366,14 @@
 
 .main .deal3 {
   border: 1px solid #ffbe17;
-  position: relative;
-}
-
-.main .deal3 .deals-container {
-  position: relative;
-}
-
-.main .deal3 .deals-container .left-container {
-  padding: 10px 20px;
 }
 
 .main .deal3 .deals-container .left-container .deals__sale {
   background-color: #ffbe17;
 }
 
-.main .deal3 .deals-container .left-container .text {
-  padding-top: 10px;
-}
-
-.main .deal3 .deals-container .image {
-  padding-top: 10px;
-  display: -ms-grid;
-  display: grid;
-}
-
 .main .deal3 .deals-container .image img {
   max-width: 65%;
-  -ms-grid-column-align: center;
-      justify-self: center;
 }
 
 .main .deal3 .details {
@@ -452,48 +381,8 @@
   display: grid;
 }
 
-.main .deal3 .details .price-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  padding: 0 20px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-}
-
 .main .deal3 .details .price-row .current-price {
   color: #ffbe17;
-  font-size: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-.main .deal3 .details .price-row .current-price .old-price {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 15px;
-  color: #878787;
-}
-
-.main .deal3 .details .price-row .current-price .old-price:before {
-  border-bottom: 2px solid #878787;
-  position: absolute;
-  content: "";
-  width: 14%;
-  height: 3%;
-  -webkit-transform: rotate(-7deg);
-          transform: rotate(-7deg);
 }
 
 .main .deal3 .details .price-row .amazon {
@@ -519,35 +408,14 @@
 
 .main .deal4 {
   border: 1px solid #ffbe17;
-  position: relative;
-}
-
-.main .deal4 .deals-container {
-  position: relative;
-}
-
-.main .deal4 .deals-container .left-container {
-  padding: 10px 20px;
 }
 
 .main .deal4 .deals-container .left-container .deals__sale {
   background-color: #ffbe17;
 }
 
-.main .deal4 .deals-container .left-container .text {
-  padding-top: 10px;
-}
-
-.main .deal4 .deals-container .image {
-  padding-top: 10px;
-  display: -ms-grid;
-  display: grid;
-}
-
 .main .deal4 .deals-container .image img {
   max-width: 52%;
-  -ms-grid-column-align: center;
-      justify-self: center;
 }
 
 .main .deal4 .details {
@@ -555,48 +423,8 @@
   display: grid;
 }
 
-.main .deal4 .details .price-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  padding: 0 20px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-}
-
 .main .deal4 .details .price-row .current-price {
   color: #ffbe17;
-  font-size: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-.main .deal4 .details .price-row .current-price .old-price {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 15px;
-  color: #878787;
-}
-
-.main .deal4 .details .price-row .current-price .old-price:before {
-  border-bottom: 2px solid #878787;
-  position: absolute;
-  content: "";
-  width: 14%;
-  height: 3%;
-  -webkit-transform: rotate(-7deg);
-          transform: rotate(-7deg);
 }
 
 .main .deal4 .details .price-row .amazon {
