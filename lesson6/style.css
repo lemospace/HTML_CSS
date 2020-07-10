@@ -3,6 +3,223 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Work Sans", sans-serif;
+  outline: none;
+}
+
+body {
+  color: #ffffff;
+  display: -ms-grid;
+  display: grid;
+  font-size: 16px;
+}
+
+.wrapper {
+  margin: 20px auto;
+}
+
+.todo-list {
+  width: 260px;
+  height: 300px;
+  grid-area: active;
+  background: #4e4e4e;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.todo-header {
+  background: #8f8e8e;
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todo-body {
+  padding: 10px 20px;
+}
+
+[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+}
+
+.tasks {
+  margin: 10px 0;
+}
+
+.task {
+  position: relative;
+}
+
+.task::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 30%;
+  height: 1px;
+  background: currentColor;
+  opacity: .1;
+}
+
+.task label {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.task label::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 20px;
+  height: 2px;
+  background: #a74a4a;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 150ms ease-in-out;
+  transition: -webkit-transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+}
+
+[type="checkbox"]:checked + label::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.btn {
+  cursor: pointer;
+  background: 0;
+  border: 0;
+  color: inherit;
+  margin-right: 5px;
+  -webkit-transition: opacity 250ms ease-in;
+  transition: opacity 250ms ease-in;
+}
+
+.btn.task {
+  font-size: 20px;
+  font-weight: 900;
+  color: #a74a4a;
+}
+
+.delete-stuff {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 5%;
+}
+
+.delete {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.delete:hover {
+  opacity: .9;
+  color: #a74a4a;
+}
+
+.new-task {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  border-bottom: 1px solid currentColor;
+  font-size: inherit;
+  outline: none;
+  -webkit-transition: border-bottom 150ms ease-in;
+  transition: border-bottom 150ms ease-in;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.new-task:focus {
+  border-bottom-width: 2px;
+}
+
+.new-task:focus::-webkit-input-placeholder {
+  opacity: .2;
+}
+
+.new-task:focus:-ms-input-placeholder {
+  opacity: .2;
+}
+
+.new-task:focus::-ms-input-placeholder {
+  opacity: .2;
+}
+
+.new-task:focus::placeholder {
+  opacity: .2;
+}
+
+.custom-checkbox {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  margin-right: 5px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+}
+
+.task:hover .custom-checkbox,
+[type="checkbox"]:focus + label .custom-checkbox {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  border: 2px solid #a74a4a;
+}
+
+[type="checkbox"]:checked + label .custom-checkbox {
+  background: #a74a4a;
+  border-color: #a74a4a;
+  -webkit-box-shadow: inset 0 0 0 2px #4e4e4e;
+          box-shadow: inset 0 0 0 2px #4e4e4e;
+}
+
+[type="checkbox"]:checked + label {
+  opacity: .5;
+}
+
+.new-task-creator {
+  position: absolute;
+  bottom: 15%;
 }
 /*# sourceMappingURL=style.css.map */
