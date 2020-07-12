@@ -19,7 +19,7 @@ body {
   position: relative;
 }
 
-.button #star {
+.button .star {
   width: 0;
   height: 0;
   color: #8d8c8c;
@@ -30,10 +30,12 @@ body {
   border-left: 10px solid transparent;
   -webkit-transform: rotate(35deg);
           transform: rotate(35deg);
-  margin-top: 5px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
-.button #star:before {
+.button .star:before {
   height: 0;
   width: 0;
   position: absolute;
@@ -48,7 +50,7 @@ body {
           transform: rotate(-35deg);
 }
 
-.button #star:after {
+.button .star:after {
   content: '';
   width: 0;
   height: 0;

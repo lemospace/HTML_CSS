@@ -14,7 +14,7 @@ body {
     margin: 20px auto;
     position: relative;
 
-    #star {
+    .star {
         width: 0;
         height: 0;
         color: #8d8c8c;
@@ -24,7 +24,7 @@ body {
         border-bottom: 7px solid #8d8c8c;
         border-left: 10px solid transparent;
         transform: rotate(35deg);
-        margin-top: 5px;
+        align-self: center;
 
         &:before {
             height: 0;
