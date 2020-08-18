@@ -1,0 +1,95 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+}
+
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 20px auto;
+  position: relative;
+}
+
+.button .star {
+  width: 0;
+  height: 0;
+  color: #8d8c8c;
+  position: relative;
+  display: block;
+  border-right: 10px solid transparent;
+  border-bottom: 7px solid #8d8c8c;
+  border-left: 10px solid transparent;
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.button .star:before {
+  height: 0;
+  width: 0;
+  position: absolute;
+  display: block;
+  top: -4.5px;
+  left: -6.5px;
+  border-bottom: 8px solid #8d8c8c;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  content: '';
+  -webkit-transform: rotate(-35deg);
+          transform: rotate(-35deg);
+}
+
+.button .star:after {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  display: block;
+  top: .3px;
+  left: -10.5px;
+  color: #8d8c8c;
+  border-right: 10px solid transparent;
+  border-bottom: 7px solid #8d8c8c;
+  border-left: 10px solid transparent;
+  -webkit-transform: rotate(-70deg);
+          transform: rotate(-70deg);
+}
+
+.button button {
+  background: -webkit-gradient(linear, left bottom, left top, from(#a1a1a1), to(#dddcdc));
+  background: linear-gradient(to top, #a1a1a1, #dddcdc);
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 4px 5px;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0.5px 1px 0.5px #525252, 0px 0px 0px 3px #c5c5c5, 0px 0px 0px 4px white, 0px 0px 0px 5px #4e4e4e;
+          box-shadow: 0px 0.5px 1px 0.5px #525252, 0px 0px 0px 3px #c5c5c5, 0px 0px 0px 4px white, 0px 0px 0px 5px #4e4e4e;
+  border-radius: 4px;
+  border: 0;
+}
+
+.button .button-name {
+  color: #585757;
+  font-weight: 900;
+  font-size: 20px;
+  margin: 0 5px;
+  text-shadow: 0px 0.5px 0.7px #fcfbfb;
+}
+/*# sourceMappingURL=style.css.map */
