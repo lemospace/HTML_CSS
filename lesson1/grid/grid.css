@@ -1,77 +1,77 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .wrapper {
-  height: 100vh;
-  display: grid;
-  grid-template-areas:
-    "a a a"
-    "b c d"
-    "e e e";
-  text-align: center;
-  grid-template-rows: 10% 80% 10%;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "a a a" "b c d" "e e e";
+    text-align: center;
+    grid-template-rows: 10% 80% 10%;
 }
+
 .header {
-  background: blue;
-  color: #fff;
-  padding: 20px;
-  grid-area: a;
+    background: blue;
+    color: #fff;
+    padding: 20px;
+    grid-area: a;
 }
+
 .aside-1 {
-  background: orange;
-  grid-area: b;
-  padding: 10px 50px;
+    background: orange;
+    grid-area: b;
+    padding: 10px 50px;
 }
+
 .main {
-  padding: 5px 30px;
-  grid-area: c;
+    padding: 5px 30px;
+    grid-area: c;
 }
 
 .aside-2 {
-  background: purple;
-  grid-area: d;
-  padding: 10px 50px;
+    background: purple;
+    grid-area: d;
+    padding: 10px 50px;
 }
+
 .footer {
-  background: green;
-  color: #fff;
-  padding: 20px;
-  grid-area: e;
+    background: green;
+    color: #fff;
+    padding: 20px;
+    grid-area: e;
 }
 
 @media all and (max-width: 800px) {
-  .wrapper {
-    height: 100vh;
-    display: grid;
-    grid-template-areas:
-      "a"
-      "b"
-      "c"
-      "d"
-      "e";
-    grid-template-rows: 10% 10% 60% 10% 10%;
-  }
-  .header {
-    background: blue;
-    color: #fff;
-    grid-area: a;
-  }
-  .aside-1 {
-    background: orange;
-    grid-area: b;
-  }
-  .main {
-    grid-area: c;
-  }
+    .wrapper {
+        height: 100vh;
+        display: grid;
+        grid-template-areas: "a" "b" "c" "d" "e";
+        grid-template-rows: 10% 10% 60% 10% 10%;
+    }
 
-  .aside-2 {
-    background: purple;
-    grid-area: d;
-  }
-  .footer {
-    background: green;
-    color: #fff;
-    grid-area: e;
-  }
+    .header {
+        background: blue;
+        color: #fff;
+        grid-area: a;
+    }
+
+    .aside-1 {
+        background: orange;
+        grid-area: b;
+    }
+
+    .main {
+        grid-area: c;
+    }
+
+    .aside-2 {
+        background: purple;
+        grid-area: d;
+    }
+
+    .footer {
+        background: green;
+        color: #fff;
+        grid-area: e;
+    }
 }
