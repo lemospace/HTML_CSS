@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Lesson3</title>
+  </head>
+  <body>
+    <div class="container middle">
+      <input type="radio" name="images" id="r1" checked />
+      <input type="radio" name="images" id="r2" />
+      <input type="radio" name="images" id="r3" />
+
+      <div class="slide-img" id="one">
+        <img src="1.jpg" alt="" />
+        <label for="r3" class="prev"
+          ><div class="prev-icon">
+            <img
+              src="https://img.icons8.com/ios-glyphs/30/000000/chevron-left.png"
+            /></div
+        ></label>
+        <label for="r2" class="next"
+          ><div class="next-icon">
+            <img
+              src="https://img.icons8.com/ios-glyphs/30/000000/chevron-right.png"
+            /></div
+        ></label>
+      </div>
+      <div class="slide-img" id="two">
+        <img src="2.jpg" alt="" />
+        <label for="r1" class="prev"
+          ><div class="prev-icon">
+            <img
+              src="https://img.icons8.com/ios-glyphs/30/000000/chevron-left.png"
+            /></div
+        ></label>
+        <label for="r3" class="next"
+          ><div class="next-icon">
+            <img
+              src="https://img.icons8.com/ios-glyphs/30/000000/chevron-right.png"
+            /></div
+        ></label>
+      </div>
+      <div class="slide-img" id="three">
+        <img src="3.jpg" alt="" />
+        <label for="r2" class="prev"
+          ><div class="prev-icon">
+            <img
+              src="https://img.icons8.com/ios-glyphs/30/000000/chevron-left.png"
+            /></div
+        ></label>
+        <label for="r1" class="next"
+          ><div class="next-icon">
+            <img
+              src="https://img.icons8.com/ios-glyphs/30/000000/chevron-right.png"
+            /></div
+        ></label>
+      </div>
+      <div class="nav">
+        <label class="dots" id="dot1" for="r1"></label>
+        <label class="dots" id="dot2" for="r2"></label>
+        <label class="dots" id="dot3" for="r3"></label>
+      </div>
+    </div>
+  </body>
+</html>

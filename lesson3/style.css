@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(100, 100, 100);
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    position: relative;
+    width: 900px;
+    height: 500px;
+    border: 5px solid #ffffff;
+    border-radius: 5px;
+}
+
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slide-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.slide-img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+#r1, #r2, #r3 {
+    display: none;
+}
+
+.prev, .next {
+    width: 7%;
+    height: 100%;
+    background: rgb(88, 88, 88, 0.1);
+    position: absolute;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.nav {
+    width: 100%;
+    height: 11px;
+    bottom: 12%;
+    position: absolute;
+    text-align: center;
+    z-index: 99;
+}
+
+.dots {
+    top: -5px;
+    width: 30px;
+    height: 8px;
+    margin-top: 30px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 20%;
+    display: inline-block;
+    background-color: rgba(144, 144, 144, 0.9);
+}
+
+.dots:hover {
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+
+.slide-img {
+    z-index: -1;
+}
+
+#r1:checked ~ #one,
+#r2:checked ~ #two,
+#r3:checked ~ #three {
+    z-index: 9;
+}
+
+#r1:checked ~ .nav #dot1,
+#r2:checked ~ .nav #dot2,
+#r3:checked ~ .nav #dot3 {
+    background: #ffffff;
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+
+.next-icon,
+.prev-icon {
+    overflow: hidden;
+    position: absolute;
+    bottom: 50%;
+    padding: 0 10px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.next-icon {
+    right: 0;
+}
